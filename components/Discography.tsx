@@ -31,15 +31,17 @@ function AlbumCard({ album }: { album: typeof albums[0] }) {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    const rotateX = ((y - centerY) / centerY) * -15;
-    const rotateY = ((x - centerX) / centerX) * 15;
+    const rotateX = ((y - centerY) / centerY) * -35;
+    const rotateY = ((x - centerX) / centerX) * 35;
 
     gsap.to(cardRef.current, {
       rotateX,
       rotateY,
+      scale: 1.05,
+      z: 50,
       duration: 0.5,
       ease: "power2.out",
-      transformPerspective: 1000,
+      transformPerspective: 800,
       transformOrigin: "center center",
     });
   };
@@ -49,6 +51,8 @@ function AlbumCard({ album }: { album: typeof albums[0] }) {
     gsap.to(cardRef.current, {
       rotateX: 0,
       rotateY: 0,
+      scale: 1,
+      z: 0,
       duration: 1,
       ease: "elastic.out(1, 0.3)",
     });

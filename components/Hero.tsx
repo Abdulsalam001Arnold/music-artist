@@ -13,26 +13,26 @@ export default function Hero() {
 
     tl.fromTo(
       ".hero-image",
-      { scale: 1.1, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 2, ease: "power3.out" }
+      { scale: 1.25, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 3, ease: "power3.out" }
     )
       .fromTo(
         ".hero-title",
-        { y: 50, opacity: 0 },
+        { y: 100, scale: 0.9, opacity: 0, rotateX: 20 },
+        { y: 0, scale: 1, opacity: 1, rotateX: 0, duration: 1.5, ease: "back.out(1.2)" },
+        "-=2"
+      )
+      .fromTo(
+        ".hero-subtitle",
+        { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
         "-=1"
       )
       .fromTo(
-        ".hero-subtitle",
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
-        "-=0.6"
-      )
-      .fromTo(
         ".hero-cta",
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
-        "-=0.6"
+        { y: 30, scale: 0.95, opacity: 0 },
+        { y: 0, scale: 1, opacity: 1, duration: 1, ease: "elastic.out(1, 0.7)" },
+        "-=0.8"
       );
   }, { scope: containerRef });
 

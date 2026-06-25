@@ -21,14 +21,15 @@ export default function Videos() {
   useGSAP(() => {
     gsap.fromTo(
       ".video-item",
-      { y: 50, opacity: 0, scale: 0.95 },
+      { y: 100, opacity: 0, scale: 0.8, rotateX: -15 },
       { 
         y: 0, 
         opacity: 1, 
         scale: 1, 
-        duration: 0.8, 
+        rotateX: 0,
+        duration: 1.2, 
         stagger: 0.2, 
-        ease: "power3.out",
+        ease: "back.out(1.2)",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 75%",

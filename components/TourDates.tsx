@@ -24,13 +24,14 @@ export default function TourDates() {
   useGSAP(() => {
     gsap.fromTo(
       ".tour-row",
-      { x: -50, opacity: 0 },
+      { x: -100, opacity: 0, scale: 0.95 },
       {
         x: 0,
         opacity: 1,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power3.out",
+        scale: 1,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power4.out",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 70%",

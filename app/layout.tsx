@@ -23,9 +23,6 @@ const mono = Space_Mono({
 export const metadata: Metadata = {
   title: "Burna Boy | African Giant | Grammy Award Winner",
   description: "Official Website for Burna Boy, the African Giant and Grammy Award winning artist.",
-  icons: {
-    icon: "/images/burna.jpg",
-  },
   openGraph: {
     title: "Burna Boy | African Giant | Grammy Award Winner",
     description: "Official Website for Burna Boy, the African Giant and Grammy Award winning artist.",

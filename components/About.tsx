@@ -25,14 +25,14 @@ export default function About() {
 
     tl.fromTo(
       ".about-image-wrapper",
-      { x: -50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      { x: -100, scale: 0.85, opacity: 0 },
+      { x: 0, scale: 1, opacity: 1, duration: 1.5, ease: "power4.out" }
     )
       .fromTo(
         ".about-text-content > *",
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out" },
-        "-=0.5"
+        { x: 50, y: 30, opacity: 0 },
+        { x: 0, y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" },
+        "-=1"
       );
   }, { scope: containerRef });
 
